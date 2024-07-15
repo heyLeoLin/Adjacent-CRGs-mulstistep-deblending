@@ -1,4 +1,4 @@
-<h1 align="center">Adjacent-CRGs-Multistep-Deblending constraints</h1>
+<h1 align="center">Adjacent-CRGs-Multistep-Deblending</h1>
 
 **Lin Shicong, Wang Benfeng***. (Tongji University)
 
