@@ -1,4 +1,4 @@
-<h1 align="center">Deep learning-based multistep deblending with adjacent common receiver gathers constraints</h1>
+<h1 align="center">Adjacent-CRGs-Multistep-Deblending constraints</h1>
 
 **Lin Shicong, Wang Benfeng***. (Tongji University)
 
