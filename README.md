@@ -2,9 +2,6 @@
 
 **Lin Shicong, Wang Benfeng***. (Tongji University)
 
-# Abstract
-*<div align="justify">Considering the consistency of seismic events in adjacent common receiver gathers (CRGs) can contribute to better deblending performance, we propose an adjacent CRGs-assisted multistep deblending algorithm. Three adjacent CRGs after pseudo-deblending are used to form a three-channel input to enhance the signal coherence of the middle CRG, and the desired single-channel output is the corresponding unblended middle CRG. Additionally, a modified U-Net training framework is designed with the AdamW optimizer, incorporating learning rate warm-up and cosine decay strategies. A multistep strategy with blending noise simulation-subtraction is also implemented to progressively attenuate blending noise and update the training input with signal preservation.</div>*
-
 <div align="center">
 <img src=https://github.com/user-attachments/assets/40f9ff36-7bb0-4a83-bf9f-f2b1c764e649>
 </div>
