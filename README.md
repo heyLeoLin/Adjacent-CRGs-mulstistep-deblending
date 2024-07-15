@@ -20,7 +20,7 @@ Our code runs on:
 * :file_folder:**data**: Training/validation/test datasets of synthetic seismic data
 * :page_facing_up:**main.py**: Main program for multistep deblending
 * :page_facing_up:**bnss.py**: Blending noise simulation-subtraction operation
-* :page_facing_up:**unet_tool.py**: Modified U-Net structure and SNR calculation functions
+* :page_facing_up:**unet_tool.py**: Modified U-Net structure and SNR calculation function
 * :page_facing_up:**warmup_tool.py**: Learning rate warm-up and cosine decay function
 
 # Workflow
