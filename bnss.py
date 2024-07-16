@@ -12,14 +12,14 @@ import scipy.io as sio
 import numpy as np
 
 # Load original data and shooting time
-mat_contents = hdf5storage.loadmat('./origin_data.mat')
+mat_contents = hdf5storage.loadmat('./data/origin_data.mat')
 pdb_data = mat_contents['pdb_data']
 data = mat_contents['data']
 Data_Shooting_he = mat_contents['Data_Shooting_he'].astype('int32').flatten()
 
 # ================================ BNSS =================================
 # Load last-step predictions
-pred_test = hdf5storage.loadmat('../3c1_step1/data_pred.mat')['pred_test']
+pred_test = hdf5storage.loadmat('./3c1_step1/data_pred.mat')['pred_test']
 nr, nt, nx = pred_test.shape[0:]
 print(f"pred_test.shape:\t{str(pred_test.shape)}", flush=True)
 
@@ -123,7 +123,7 @@ print(f"data_valid shape: {data_valid.shape}")
 print(f"data_test shape: {data_test.shape}")
 
 # Save results if needed
-sio.savemat('./data_pred_bnss.mat', {
+sio.savemat('./3c1_step1/data_pred_bnss.mat', {
     'hun_train': hun_train,
     'hun_valid': hun_valid,
     'hun_test': hun_test,
