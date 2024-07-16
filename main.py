@@ -31,14 +31,15 @@ batch_size = 2
 
 # Create directory to save data & model
 save_dir = "./3c1_step1"
+# save_dir = "./3c1_step2"
 if not os.path.exists(save_dir):
     os.makedirs(save_dir)
 
 # ================================= load dataset ================================
-mat_contents = hdf5storage.loadmat('./dataset_3channel.mat')
+mat_contents = hdf5storage.loadmat('./data/dataset_3channel.mat')
 
 # Load updated dataset: using results of last-step deblending after BNSS (bnss.py)
-# mat_contents = hdf5storage.loadmat('./data_pred_bnss.mat')
+# mat_contents = hdf5storage.loadmat('./3c1_step1/data_pred_bnss.mat')
 
 # Extract data from the loaded .mat file
 x_train = mat_contents["hun_train"]
@@ -47,8 +48,6 @@ x_valid = mat_contents["hun_valid"]
 y_valid = mat_contents["data_valid"]
 x_test = mat_contents["hun_test"]
 y_test = mat_contents["data_test"]
-Data_Shooting = mat_contents['Data_Shooting_he']
-Data_Shooting = torch.from_numpy(Data_Shooting.astype('int32'))
 
 # Expand channel dimension for 3-channel (1-channel) training pairs
 # 1-channel
