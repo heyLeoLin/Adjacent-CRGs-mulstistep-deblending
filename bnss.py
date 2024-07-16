@@ -21,7 +21,7 @@ Data_Shooting_he = mat_contents['Data_Shooting_he'].astype('int32').flatten()
 # Load last-step predictions
 pred_test = hdf5storage.loadmat('./3c1_step1/data_pred.mat')['pred_test']
 nr, nt, nx = pred_test.shape[0:]
-print(f"pred_test.shape:\t{str(pred_test.shape)}", flush=True)
+print(f"pred_test.shape:{str(pred_test.shape)}", flush=True)
 
 dt = 0.004
 dx = 12
