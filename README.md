@@ -24,4 +24,12 @@ Our code runs on:
 1. Use Google Drive link provided in :file_folder:**data** to obtain the datasets;
 2. Run :page_facing_up:**main.py** first to get the first-step deblending results;
 3. After the previous stage of deblending, run :page_facing_up:**bnss.py** to update the input dataset for the next stage of deblending;
-4. (if needed) Modify parts of the commented code in :page_facing_up:**main.py** and use the updated dataset from :page_facing_up:**bnss.py** to perform the second step of deblending.
+4. (If needed) Comment and modify parts of the commented code in :page_facing_up:**main.py** and use the updated dataset from :page_facing_up:**bnss.py** to perform the second step of deblending.
+
+>The codes that need to be commented or modified mainly include：
+>
+>number of epochs: `num_epochs`; learning rate：`lr`;
+>
+>file location：`hdf5storage.loadmat('./3c1_step1/data_pred_bnss.mat')`;
+>
+>optimized model path：`state_dict = torch.load('./3c1_step1/model.pth')`.
