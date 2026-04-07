@@ -24,6 +24,7 @@ To ensure exact reproducibility, please use Python 3.8 and install the required 
 * :page_facing_up:**bnss_dataset_builder.py**: Script for the Blending Noise Simulation-Subtraction (BNSS) operation to update datasets.
 * :page_facing_up:**unet_tool.py**: Defines the modified U-Net architecture and the SNR evaluation metric.
 * :page_facing_up:**warmup_tool.py**: Learning rate scheduler featuring warm-up and cosine annealing decay.
+* :file_folder:**result**: The optimized model weights from the step1 and step2.
 
 # Workflow
 1. **Prepare Dataset**: Download the required datasets using the Google Drive link provided in the :file_folder:**data** to obtain the datasets.
@@ -34,5 +35,5 @@ To ensure exact reproducibility, please use Python 3.8 and install the required 
 💡 **Note for Step 2/Step 3**:
 When executing the subsequent stages, please ensure you manually adjust the following parameters and paths in the scripts to load the previous outputs properly:
 * Hyperparameters: Adjust the number of epochs `num_epochs` and learning rate `lr`;
-* Input Data Path: Point to the newly built dataset (e.g.,`hdf5storage.loadmat('./3c1_step1/data_pred_bnss.mat')`);
-* Pre-trained Weights: Load the optimized model weights from the prior step (e.g.,`state_dict = torch.load('./3c1_step1/model.pth')`).
+* Input Data Path: Point to the newly built dataset (e.g.,`hdf5storage.loadmat('./result/3c1_step1/data_pred_bnss.mat')`);
+* Pre-trained Weights: Load the optimized model weights from the prior step (e.g.,`state_dict = torch.load('./result/3c1_step1/model.pth')`).
